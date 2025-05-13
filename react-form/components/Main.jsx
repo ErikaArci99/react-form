@@ -25,6 +25,11 @@ const posts = [
 
 const Main = () => {
     const [newPost, setNewPost] = useState("");
+
+    const onHandleSubmit = (e) => {
+        e.preventDefault();
+    }
+
     return (
         <>
             <div className="container">
@@ -39,7 +44,7 @@ const Main = () => {
                                 )
                             })}
                         </ul>
-                        <form action="">
+                        <form onSubmit={onHandleSubmit}>
                             <input type="text" placeholder='Nuovo Post' className="form-control mt-4" onChange={(e) => (setNewPost(e.target.value))} />
                             <button type="button" className="btn btn-primary text-light mt-1">Inserisci Post</button>
                         </form>
