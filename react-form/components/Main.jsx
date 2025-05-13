@@ -17,11 +17,14 @@ const Main = () => {
 
         if (newPost.trim() === "") return;
 
+
+        // aggiungo un nuovo oggetto
         const obj = {
             id: updatePosts.length ? updatePosts[updatePosts.length - 1].id + 1 : 1,
             title: newPost
         };
 
+        // aggiorno la lista
         setPosts([...updatePosts, obj]);
         setNewPost(""); // resetta l'input
     };
