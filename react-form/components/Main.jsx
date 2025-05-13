@@ -25,9 +25,16 @@ const posts = [
 
 const Main = () => {
     const [newPost, setNewPost] = useState("");
+    const [updatePosts, setPosts] = useState(posts);
 
     const onHandleSubmit = (e) => {
         e.preventDefault();
+
+        // creo un nuovo oggetto
+        const obj = {
+            id: posts[posts.leght - 1].id + 1,
+            title: newPost
+        }
     }
 
     return (
